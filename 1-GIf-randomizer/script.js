@@ -1,7 +1,7 @@
 let APIKEY = "XGFI395wJ4btleHm5h6PlxhetZ9hOIrF";
 
 document.addEventListener("DOMContentLoaded", init);
-
+//
 function init() {
   document.getElementById("button").addEventListener("click", (ev) => {
     ev.preventDefault(); //to stop the page reload
