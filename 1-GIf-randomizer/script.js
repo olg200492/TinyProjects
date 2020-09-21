@@ -1,23 +1,22 @@
 let APIKEY = "XGFI395wJ4btleHm5h6PlxhetZ9hOIrF";
-const button = document.getElementById("button");
-//document.addEventListener("DOMContentLoaded", () => {
 
-function click() {
-  button.addEventListener("click", function () {
-    //alert("hello");
-    //validation code to see State field is mandatory.
-    let url = `https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}`;
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  document.getElementById("button").addEventListener("click", (ev) => {
+    ev.preventDefault(); //to stop the page reload
+    let url = `https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}&tag=&rating=g`;
+    console.log(url);
     fetch(url)
-      .then((Response) => Response.json())
+      .then((response) => response.json())
       .then((content) => {
-        //deta,meta
         console.log(content.data);
         console.log("META", content.meta);
         let fig = document.createElement("figure");
         let img = document.createElement("img");
         let fc = document.createElement("figcaption");
-        img.src = content.data["embed_url"];
-        img.alt = content.data["title"];
+        img.src = content.data.images.downsized["url"];
+        img.alt = content.data.images.downsized["title"];
         fc.textContent = content.data["title"];
         fig.appendChild(img);
         fig.appendChild(fc);

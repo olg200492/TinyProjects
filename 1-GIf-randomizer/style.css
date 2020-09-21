@@ -6,20 +6,28 @@
 
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   font-family: "Poppins", sans-serif;
   margin: 0;
   min-height: 100vh;
 }
 
 #div-parent-botton {
-  position: relative;
+  position: sticky;
   left: 0;
   height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #div-button {
   position: relative;
-  left:-79px;
+  left: -79px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
