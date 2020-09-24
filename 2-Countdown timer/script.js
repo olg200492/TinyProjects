@@ -3,7 +3,7 @@ loadEventListeners();
 
 function loadEventListeners() {
   document.addEventListener("DOMContentLoaded", function () {
-    /* The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. */
+  /* The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. */
     calcTime();
   });
 }
@@ -42,13 +42,16 @@ function calcTime(dates) {
     document.querySelector(".clock-hours").innerHTML = hours;
     document.querySelector(".clock-minutes").innerHTML = minutes;
     document.querySelector(".clock-seconds").innerHTML = seconds;
+    document.querySelector("#massage").innerHTML =
+      "&#127880 Until your Birthday &#127880";
 
     if (now >= date) {
       clearInterval(startTimer);
       document.querySelector(".clock-day").innerHTML = "D";
       document.querySelector(".clock-hours").innerHTML = "O";
       document.querySelector(".clock-minutes").innerHTML = "N";
-      document.querySelector(".clock-seconds").innerHTML = "E";
+     document.querySelector(".clock-seconds").innerHTML = "E";
+     document.querySelector("#massage").innerHTML = "";
     }
   }
 
