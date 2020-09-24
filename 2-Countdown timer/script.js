@@ -11,7 +11,7 @@ function loadEventListeners() {
 let timeTo = document.getElementById("time-to").value,
   date,
   now = new Date(),
-  newYear = new Date("1.1.2021").getTime(),
+  newYear = new Date("1.1.2020").getTime(),
   startTimer = "";
 
 // calculate date, hour, minute and second
